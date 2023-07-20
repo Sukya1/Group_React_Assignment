@@ -6,11 +6,18 @@ import {useRef, useState} from "react";
 function GroceryItem(props) {
 
     const [isCompleted, setIsCompleted] = useState(false);
+
+
+
+    function handleChildClick(e) {
+        setIsCompleted(!isCompleted);
+        e.stopPropagation();
+    }
     // const inputRef = useRef();
     return (
         <div className="row gy-3">
             <div
-                onClick={() => setIsCompleted(!isCompleted)}
+                onClick={handleChildClick}
                 style={isCompleted ? { backgroundColor: "gray" } : {}}
                 className="col-md-8 groceryitem m-auto"
             >
