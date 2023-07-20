@@ -1,6 +1,6 @@
 import "./GroceryItem.css";
 import PropTypes from "prop-types";
-import {useRef, useState} from "react";
+import {useState} from "react";
 
 
 function GroceryItem(props) {
@@ -8,23 +8,22 @@ function GroceryItem(props) {
     const [isCompleted, setIsCompleted] = useState(false);
 
 
-
     function handleChildClick(e) {
         setIsCompleted(!isCompleted);
         e.stopPropagation();
     }
-    // const inputRef = useRef();
+
     return (
         <div className="row gy-3">
             <div
                 onClick={handleChildClick}
-                style={isCompleted ? { backgroundColor: "gray" } : {}}
+                style={isCompleted ? {backgroundColor: "gray"} : {}}
                 className="col-md-8 groceryitem m-auto"
             >
                 <div className="row pt-3 text-box">
-                    {/* Note that we are using an embedded JS expression in our JSX */}
+
                     <p
-                        style={isCompleted ? { textDecoration: "line-through" } : {}}
+                        style={isCompleted ? {textDecoration: "line-through"} : {}}
                         className="text"
                     >
                         {props.text}
