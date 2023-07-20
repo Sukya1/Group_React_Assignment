@@ -22,6 +22,18 @@ function Category(props){
             })
         );
     }
+
+    function handleChildButtonClick(e) {
+        addGroceryItem();
+        e.stopPropagation();
+    }
+
+    function handleButtonInputClick(e) {
+
+        e.stopPropagation();
+    }
+
+
     return (
         <div className="row gy-3">
             <div
@@ -80,10 +92,11 @@ function Category(props){
                                 className="form-control"
                                 placeholder="Write Grocery Item here..."
                                 aria-label="GroceryItemInput"
+                                onClick={handleButtonInputClick}
                             />
                             <div className="input-group-append">
                                 <button
-                                    onClick={addGroceryItem}
+                                    onClick={handleChildButtonClick}
                                     className="btn btn-primary h-100 m-0"
                                     type="button"
                                 >
