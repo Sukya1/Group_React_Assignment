@@ -1,12 +1,12 @@
-.category {
+.groceryitem {
     border: solid 1px black;
     border-radius: 1em;
     cursor: pointer;
     transition: background-color 0.5s ease-in-out;
 }
 
-.category:hover {
-    background-color: rgb(60, 127, 194);
+.groceryitem:hover {
+    background-color: rgb(132, 57, 208);
 }
 
 .text-box{

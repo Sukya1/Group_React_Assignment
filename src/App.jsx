@@ -40,6 +40,11 @@ function App() {
                     );
                 })}
             </div>
+            {/*<div className="row justify-center text-center">*/}
+            {/*    <Category  groceryitems={["Tomatoes","Carrot","Potatoes"]}/>*/}
+            {/*    <Category  groceryitems={["Milk","Half & Half","Creamer"]}/>*/}
+            {/*    <Category  groceryitems={["Chicken","Fish","Shrimp"]}/>*/}
+            {/*</div>*/}
             <div className="row mt-3 d-flex justify-content-center">
                 <div className="col-md-6 ">
                     <div className="input-group mb-3">
